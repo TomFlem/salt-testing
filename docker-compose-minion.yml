@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  eb_salt_minion:
+    build:
+      context: .
+      dockerfile: Dockerfile-minion
+    volumes:
+      - /:/host
+      - /var/run/docker.sock:/var/run/docker.sock

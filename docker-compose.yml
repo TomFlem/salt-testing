@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  eb_salt_master:
+    build:
+      context: .
+      dockerfile: Dockerfile-master
+    ports:
+      - "4505:4505"
+      - "4506:4506"
+    restart: always
